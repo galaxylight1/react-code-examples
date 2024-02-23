@@ -8,4 +8,4 @@ import MyButton from './MyButton';
 
 ReactDOM.createRoot(
     document.querySelector('#root')
-).render(<MyButton />);
+).render(<MyApp />);

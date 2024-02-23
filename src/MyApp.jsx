@@ -5,6 +5,7 @@ export default function MyApp() {
         <div>
             <h1>My App</h1>
             <MyButton />
+            <MyButton />
         </div>
     )
 }
