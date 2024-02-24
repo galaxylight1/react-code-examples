@@ -1,3 +1,5 @@
+import ProductRow from "./ProductRow";
+
 export default function ProductRowTable({ products }) {
   const fruits = [];
   const vegetables = [];
@@ -18,16 +20,11 @@ export default function ProductRowTable({ products }) {
         </thead>
         <tbody>
           {fruits.map((fruit) => (
-            <tr>
-              <th
-                style={{
-                  color: fruit.stocked ? "black" : "red",
-                }}
-              >
-                {fruit.name}
-              </th>
-              <th>{fruit.price}</th>
-            </tr>
+            <ProductRow
+              name={fruit.name}
+              stocked={fruit.stocked}
+              price={fruit.price}
+            />
           ))}
         </tbody>
       </table>
