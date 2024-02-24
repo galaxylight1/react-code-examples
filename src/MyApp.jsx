@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import MyButton from './MyButton';
+import ProductFilterableTable from './ProductFilterableTable';
 
 export default function MyApp() {
     const [count, setCount] = useState(0);
