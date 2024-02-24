@@ -1,14 +1,23 @@
 import ProductRow from "./ProductRow";
 
-export default function ProductRowTable({ products }) {
+export default function ProductRowTable({ products, filterText, inStockOnly }) {
   const fruits = [];
   const vegetables = [];
 
   products.forEach((product) => {
-    if (product.category == "Fruits") {
-      fruits.push(product);
-    } else {
-      vegetables.push(product);
+    if(!inStockOnly) {
+        if(product.category == 'Fruits') {
+            fruits.push(product);
+        } else if(product.category == 'Vegetables') {
+            vegetables.push(product);
+        }
+    }
+    else {
+        if(product.category == 'Fruits' && product.stocked) {
+            fruits.push(product);
+        } else if(product.category == 'Vegetables' && product.stocked) {
+            vegetables.push(product);
+        }
     }
   });
 

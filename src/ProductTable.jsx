@@ -1,6 +1,6 @@
 import ProductRowTable from "./ProductRowTable.jsx";
 
-export default function ProductTable({ products }) {
+export default function ProductTable({ products, filterText, inStockOnly }) {
   return (
     <table>
       <thead>
@@ -10,7 +10,7 @@ export default function ProductTable({ products }) {
         </tr>
       </thead>
       <tbody>
-        <ProductRowTable products={products} />
+        <ProductRowTable products={products} filterText={filterText} inStockOnly={inStockOnly} />
       </tbody>
     </table>
   );

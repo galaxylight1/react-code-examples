@@ -1,4 +1,4 @@
-export default function SearchBar({ products }) {
+export default function SearchBar({ products, filterText, inStockOnly }) {
   return (
     <>
       <div
@@ -7,9 +7,9 @@ export default function SearchBar({ products }) {
           flexDirection: "column",
         }}
       >
-        <input type="text" placeholder="Search..." style={{ width: "200px" }} />
+        <input type="text" placeholder="Search..." style={{ width: "200px" }} value={filterText} />
         <label>
-          <input type="checkbox" /> Only show products in stock
+          <input type="checkbox" checked={inStockOnly} /> Only show products in stock
         </label>
       </div>
     </>

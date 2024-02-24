@@ -1,10 +1,11 @@
+import { useState } from "react";
 import SearchBar from "./SearchBar";
 import ProductTable from "./ProductTable";
 
 const products = [
     {category: "Fruits", price: "$1", stocked: true, name: "Apple"},
-    {category: "Vegetable", price: "$2", stocked: true, name: "Spinach"},
-    {category: "Vegetable", price: "$4", stocked: true, name: "Brocolli"},
+    {category: "Vegetables", price: "$2", stocked: true, name: "Spinach"},
+    {category: "Vegetables", price: "$4", stocked: true, name: "Brocolli"},
     {category: "Fruits", price: "$3", stocked: false, name: "Dragonfruit"}
 ];
 
