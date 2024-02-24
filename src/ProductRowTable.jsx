@@ -5,6 +5,7 @@ export default function ProductRowTable({ products, onFilterTextChange, onInStoc
   const vegetables = [];
 
   products.forEach((product) => {
+    if(product.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) return; // filtering logic
     if(!inStockOnly) {
         if(product.category == 'Fruits') {
             fruits.push(product);
