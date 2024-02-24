@@ -1,6 +1,6 @@
 import ProductRow from "./ProductRow";
 
-export default function ProductRowTable({ products, filterText, inStockOnly }) {
+export default function ProductRowTable({ products, onFilterTextChange, onInStockOnlyChange, filterText, inStockOnly }) {
   const fruits = [];
   const vegetables = [];
 

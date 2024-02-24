@@ -1,6 +1,6 @@
 import ProductRowTable from "./ProductRowTable.jsx";
 
-export default function ProductTable({ products, filterText, inStockOnly }) {
+export default function ProductTable({ products, onFilterTextChange, onInStockOnlyChange, filterText, inStockOnly }) {
   return (
     <table>
       <thead>
