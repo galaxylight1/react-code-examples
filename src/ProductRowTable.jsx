@@ -34,16 +34,11 @@ export default function ProductRowTable({ products }) {
         </thead>
         <tbody>
           {vegetables.map((vegetable) => (
-            <tr>
-              <th
-                style={{
-                  color: vegetable.stocked ? "black" : "red",
-                }}
-              >
-                {vegetable.name}
-              </th>
-              <th>{vegetable.price}</th>
-            </tr>
+            <ProductRow
+              name={vegetable.name}
+              stocked={vegetable.stocked}
+              price={vegetable.price}
+            />
           ))}
         </tbody>
       </table>
