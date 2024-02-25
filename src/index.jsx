@@ -7,7 +7,8 @@ import List from './List';
 import MyButton from './MyButton';
 import ProductFilterableTable from './ProductFilterableTable';
 import { Users } from './Users';
+import App from './App';
 
 ReactDOM.createRoot(
     document.querySelector('#root')
-).render(<Users />);
+).render(<App />);
